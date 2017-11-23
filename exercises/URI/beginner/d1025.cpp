@@ -18,6 +18,7 @@ int main() {
 			x.push_back(marble);
 		}
 
+		sort(x.begin(), x.end());
 		printf("CASE# %d:\n", j);
 
 		for(int i=0;i<q;i++) {
@@ -26,13 +27,14 @@ int main() {
 			for(int k=0;k<n;k++) {
 				if(value==x[k]){
 					flag=k;
+					break;
 				}
 			}
 
 			if(flag==-1) {
 				printf("%d not found\n", value);
 			} else {
-				printf("%d found at %d\n", value, flag);
+				printf("%d found at %d\n", value, flag+1);
 			}
 		}
 
